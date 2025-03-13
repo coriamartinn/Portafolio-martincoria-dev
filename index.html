@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <h1>Mi Portafolio</h1>
+            <ul class="nav-links">
+                <li><a href="#about">Sobre Mí</a></li>
+                <li><a href="#projects">Proyectos</a></li>
+                <li><a href="#skills">Habilidades</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+            
+            <!-- Botones de interactividad -->
+            <div class="buttons-container">
+                <button id="theme-toggle"><i class="fas fa-moon"></i></button>
+                <button id="language-toggle"><i class="fas fa-globe"></i></button>
+                <button id="menu-toggle"><i class="fas fa-bars"></i></button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="hero-content">
+                <h2 id="hero-title">Hi, I'm <span>Martin Coria</span></h2>
+                <p id="hero-subtitle">Programador jr</p>
+                <a href="#projects" class="btn" id="view-work-btn">Ver mi trabajo</a>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2 id="about-title">Sobre Mí</h2>
+            <p id="about-description">
+                Soy un programador junior en formación con conocimientos en desarrollo web y backend...
+            </p>
+        </section>
+
+        <section id="projects">
+            <h2 id="projects-title">Proyectos Destacados</h2>
+            <div class="projects-container">
+                <div class="project">
+                    <div class="project-info">
+                        <h3>Proyecto 1</h3>
+                        <p>Descripción breve del proyecto.</p>
+                        <a href="#" class="btn">Ver proyecto</a>
+                    </div>
+                    <img src="/images/proyecto3.jpg" alt="Proyecto 1">
+                </div>
+                <div class="project">
+                    <div class="project-info">
+                        <h3>Proyecto 2</h3>
+                        <p>Descripción breve del proyecto.</p>
+                        <a href="#" class="btn">Ver proyecto</a>
+                    </div>
+                    <img src="/images/proyecto3.jpg" alt="Proyecto 2">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <h2>¡Conéctate conmigo!</h2>
+        <div class="social-links">
+            <a href="https://github.com/coriamartinn" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/martincoria" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/coriamartinn" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p class="footer-bottom">© 2025 - Martin Coria. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
