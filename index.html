@@ -5,78 +5,148 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Portafolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="/CSS/styles.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
     <header>
         <nav>
-            <h1>Mi Portafolio</h1>
-            <ul class="nav-links">
-                <li><a href="#about">Sobre Mí</a></li>
-                <li><a href="#projects">Proyectos</a></li>
-                <li><a href="#skills">Habilidades</a></li>
-                <li><a href="#contact">Contacto</a></li>
-            </ul>
-            
-            <!-- Botones de interactividad -->
-            <div class="buttons-container">
-                <button id="theme-toggle"><i class="fas fa-moon"></i></button>
-                <button id="language-toggle"><i class="fas fa-globe"></i></button>
-                <button id="menu-toggle"><i class="fas fa-bars"></i></button>
+            <h1 data-es="LOGO" data-en="LOGO">LOGO</h1>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
             </div>
+            <ul class="nav-links">
+                <li><a href="#about" data-es="Sobre Mí" data-en="About Me">Sobre Mí</a></li>
+                <li><a href="#projects" data-es="Proyectos" data-en="Projects">Proyectos</a></li>
+                <li><a href="#skills" data-es="Habilidades" data-en="Skills">Habilidades</a></li>
+                <li><a href="#contact" data-es="Contacto" data-en="Contact">Contacto</a></li>
+                <button id="theme-toggle" class="theme-button"><i class="fas fa-moon"></i></button>
+            </ul>
+            <!-- Botón para cambiar idioma -->
+            <button id="language-toggle" class="btn" data-es="EN" data-en="ES">EN</button>
         </nav>
     </header>
 
     <main>
         <section id="hero">
             <div class="hero-content">
-                <h2 id="hero-title">Hi, I'm <span>Martin Coria</span></h2>
-                <p id="hero-subtitle">Programador jr</p>
-                <a href="#projects" class="btn" id="view-work-btn">Ver mi trabajo</a>
+                <h2 data-es="Hola, Yo soy [Martin Coria]" data-en="Hi, I'm [Martin Coria]">Hola, Yo soy [Martin Coria]</h2>
+                <p data-es="Programador jr" data-en="Junior Programmer">Programador jr</p>
+                <a href="#projects" class="btn" data-es="Ver mi trabajo" data-en="See my work">Ver mi trabajo</a>
             </div>
         </section>
 
         <section id="about">
-            <h2 id="about-title">Sobre Mí</h2>
-            <p id="about-description">
-                Soy un programador junior en formación con conocimientos en desarrollo web y backend...
-            </p>
+            <h2 data-es="Sobre Mí" data-en="About Me">Sobre Mí</h2>
+            <p data-es="Soy un programador junior en formación con conocimientos en desarrollo web y backend. Estudio Programación en la UTN para fortalecer mis habilidades técnicas. Me destaco por mi pensamiento lógico y resolutivo, con iniciativa y capacidad para analizar problemas y encontrar soluciones eficientes. Busco aportar valor en un equipo dinámico mientras sigo creciendo profesionalmente."
+               data-en="I am a junior programmer in training with knowledge in web and backend development. I study Programming at UTN to strengthen my technical skills. I stand out for my logical and problem-solving thinking, with initiative and the ability to analyze problems and find efficient solutions. I seek to add value to a dynamic team while continuing to grow professionally.">Soy un programador junior en formación con conocimientos en desarrollo web y backend. Estudio Programación en la UTN para fortalecer mis habilidades técnicas. Me destaco por mi pensamiento lógico y resolutivo, con iniciativa y capacidad para analizar problemas y encontrar soluciones eficientes. Busco aportar valor en un equipo dinámico mientras sigo creciendo profesionalmente.</p>
         </section>
 
         <section id="projects">
-            <h2 id="projects-title">Proyectos Destacados</h2>
+            <h2 data-es="Proyectos Destacados" data-en="Featured Projects">Proyectos Destacados</h2>
             <div class="projects-container">
                 <div class="project">
                     <div class="project-info">
-                        <h3>Proyecto 1</h3>
-                        <p>Descripción breve del proyecto.</p>
-                        <a href="#" class="btn">Ver proyecto</a>
+                        <h3 data-es="Proyecto 1" data-en="Project 1">Proyecto 1</h3>
+                        <p data-es="Descripción breve del proyecto." data-en="Brief project description.">Descripción breve del proyecto.</p>
+                        <a href="#" class="btn" data-es="Ver proyecto" data-en="View project">Ver proyecto</a>
                     </div>
-                    <img src="/images/proyecto3.jpg" alt="Proyecto 1">
+                    <img src="/images/proyecto1.jpg" alt="Proyecto 1">
                 </div>
                 <div class="project">
                     <div class="project-info">
-                        <h3>Proyecto 2</h3>
-                        <p>Descripción breve del proyecto.</p>
-                        <a href="#" class="btn">Ver proyecto</a>
+                        <h3 data-es="Proyecto 1" data-en="Project 1">Proyecto 1</h3>
+                        <p data-es="Descripción breve del proyecto." data-en="Brief project description.">Descripción breve del proyecto.</p>
+                        <a href="#" class="btn" data-es="Ver proyecto" data-en="View project">Ver proyecto</a>
                     </div>
-                    <img src="/images/proyecto3.jpg" alt="Proyecto 2">
+                    <img src="/images/proyecto1.jpg" alt="Proyecto 1">
+                </div>
+                <div class="project">
+                    <div class="project-info">
+                        <h3 data-es="Proyecto 1" data-en="Project 1">Proyecto 1</h3>
+                        <p data-es="Descripción breve del proyecto." data-en="Brief project description.">Descripción breve del proyecto.</p>
+                        <a href="#" class="btn" data-es="Ver proyecto" data-en="View project">Ver proyecto</a>
+                    </div>
+                    <img src="/images/proyecto1.jpg" alt="Proyecto 1">
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2 data-es="Habilidades y Conocimientos" data-en="Skills and Knowledge">Habilidades y Conocimientos</h2>
+            <div class="skills-container">
+                <!-- Columna de Habilidades -->
+                <div class="skills-column">
+                    <h3 data-es="Habilidades" data-en="Skills">Habilidades</h3>
+                    <div class="skill">
+                        <div class="skill-name" data-es="HTML" data-en="HTML">HTML</div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="width: 90%;">90%</div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-name" data-es="CSS" data-en="CSS">CSS</div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="width: 85%;">85%</div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-name" data-es="JavaScript" data-en="JavaScript">JavaScript</div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="width: 75%;">75%</div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-name" data-es="React" data-en="React">React</div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="width: 70%;">70%</div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Columna de Conocimientos Técnicos -->
+                <div class="skills-column">
+                    <h3 data-es="Conocimientos Técnicos" data-en="Technical Knowledge">Conocimientos Técnicos</h3>
+                    <div class="skill">
+                        <div class="skill-name" data-es="Node.js" data-en="Node.js">Node.js</div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="width: 65%;">65%</div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-name" data-es="Git y GitHub" data-en="Git and GitHub">Git y GitHub</div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="width: 80%;">80%</div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-name" data-es="Bases de Datos SQL" data-en="SQL Databases">Bases de Datos SQL</div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="width: 60%;">60%</div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-name" data-es="APIs REST" data-en="REST APIs">APIs REST</div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="width: 70%;">70%</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
+    <!-- Footer mejorado -->
     <footer id="contact">
-        <h2>¡Conéctate conmigo!</h2>
+        <h2 data-es="¡Conéctate conmigo!" data-en="Get in touch with me!">¡Conéctate conmigo!</h2>
+        <div class="footer-decoration"></div>
         <div class="social-links">
             <a href="https://github.com/coriamartinn" target="_blank"><i class="fab fa-github"></i></a>
             <a href="https://www.linkedin.com/in/martincoria" target="_blank"><i class="fab fa-linkedin"></i></a>
             <a href="https://www.instagram.com/coriamartinn" target="_blank"><i class="fab fa-instagram"></i></a>
         </div>
-        <p class="footer-bottom">© 2025 - Martin Coria. Todos los derechos reservados.</p>
+        <p class="footer-bottom" data-es="© 2025 - Martin Coria. Todos los derechos reservados." data-en="© 2025 - Martin Coria. All rights reserved.">© 2025 - Martin Coria. Todos los derechos reservados.</p>
     </footer>
 
-    <script src="/JS/main.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>

@@ -1,58 +1,60 @@
-document.addEventListener("DOMContentLoaded", () => {
-  // Dark Mode Toggle
-  const themeToggle = document.getElementById("theme-toggle");
-  themeToggle.addEventListener("click", () => {
-      document.body.classList.toggle("dark-mode");
-      themeToggle.innerHTML = document.body.classList.contains("dark-mode") 
-          ? '<i class="fas fa-sun"></i>' 
-          : '<i class="fas fa-moon"></i>';
-  });
-
-  // Menú Hamburguesa
-  const menuToggle = document.getElementById("menu-toggle");
+document.addEventListener("DOMContentLoaded", function() {
+  const menuToggle = document.querySelector(".menu-toggle");
   const navLinks = document.querySelector(".nav-links");
-  menuToggle.addEventListener("click", () => {
+
+  menuToggle.addEventListener("click", function() {
       navLinks.classList.toggle("active");
   });
+});
 
-  // Traducción de idioma
-  const languageToggle = document.getElementById("language-toggle");
-  let currentLang = "es";
+document.addEventListener("DOMContentLoaded", () => {
+  const themeToggle = document.getElementById("theme-toggle");
+  const body = document.body;
+  const icon = themeToggle.querySelector("i");
 
-  const translations = {
-      en: {
-          "hero-title": "Hi, I'm <span>Martin Coria</span>",
-          "hero-subtitle": "Junior Developer",
-          "view-work-btn": "View My Work",
-          "about-title": "About Me",
-          "about-description": "I am a junior programmer in training with knowledge in web development...",
-          "projects-title": "Featured Projects"
-      },
-      es: {
-          "hero-title": "Hola, soy <span>Martin Coria</span>",
-          "hero-subtitle": "Programador jr",
-          "view-work-btn": "Ver mi trabajo",
-          "about-title": "Sobre Mí",
-          "about-description": "Soy un programador junior en formación con conocimientos en desarrollo web...",
-          "projects-title": "Proyectos Destacados"
-      },
-      pt: {
-          "hero-title": "Oi, sou <span>Martin Coria</span>",
-          "hero-subtitle": "Programador júnior",
-          "view-work-btn": "Veja Meu Trabalho",
-          "about-title": "Sobre Mim",
-          "about-description": "Sou um programador júnior em formação com conhecimentos em desenvolvimento web...",
-          "projects-title": "Projetos em Destaque"
-      }
-  };
+  // Cargar el tema guardado en localStorage
+  const savedTheme = localStorage.getItem("theme");
 
-  languageToggle.addEventListener("click", () => {
-      currentLang = currentLang === "es" ? "en" : currentLang === "en" ? "pt" : "es";
-      languageToggle.innerHTML = currentLang === "es" ? '<i class="fas fa-globe"></i>' 
-                             : currentLang === "en" ? '<i class="fas fa-flag-usa"></i>' 
-                             : '<i class="fas fa-flag-br"></i>';
-      for (const key in translations[currentLang]) {
-          document.getElementById(key).innerHTML = translations[currentLang][key];
-      }
+  if (savedTheme) {
+      body.classList.add(savedTheme);
+      icon.classList.toggle("fa-moon", savedTheme === "dark-mode");
+      icon.classList.toggle("fa-sun", savedTheme === "light-mode");
+  }
+
+  // Evento para cambiar el tema
+  themeToggle.addEventListener("click", () => {
+      body.classList.toggle("dark-mode");
+      body.classList.toggle("light-mode");
+
+      const newTheme = body.classList.contains("light-mode") ? "light-mode" : "dark-mode";
+      localStorage.setItem("theme", newTheme);
+
+      // Cambiar el ícono del botón
+      icon.classList.toggle("fa-moon", newTheme === "dark-mode");
+      icon.classList.toggle("fa-sun", newTheme === "light-mode");
   });
+});
+
+
+
+// Función para cambiar el idioma
+const languageToggle = document.getElementById('language-toggle');
+const elementsToTranslate = document.querySelectorAll('[data-es], [data-en]');
+
+languageToggle.addEventListener('click', () => {
+    const currentLanguage = languageToggle.innerText.trim();
+
+    // Cambiar el idioma
+    elementsToTranslate.forEach(element => {
+        if (currentLanguage === 'EN') {
+            // Cambiar al inglés
+            element.innerText = element.getAttribute('data-en') || element.innerText;
+        } else {
+            // Cambiar al español
+            element.innerText = element.getAttribute('data-es') || element.innerText;
+        }
+    });
+
+    // Cambiar el texto del botón
+    languageToggle.innerText = currentLanguage === 'EN' ? 'ES' : 'EN';
 });
